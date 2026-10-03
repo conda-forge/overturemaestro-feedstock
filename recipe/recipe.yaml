@@ -1,8 +1,7 @@
 schema_version: 1
 
 context:
-  python_min: "3.10"
-  version: "0.6.1"
+  version: "0.7.0"
 
 package:
   name: overturemaestro
@@ -10,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/overturemaestro/overturemaestro-${{ version }}.tar.gz
-  sha256: 170ee5c328e91a8dd4b720450291bf16990956d3d270e71e61a495eac324176e
+  sha256: 7bc27512e7328f1016e363db217ace8f092d40e55303e0ee04f42f95f6b83023
 
 build:
   number: 0
@@ -41,10 +40,11 @@ requirements:
     - numpy >=1.26.0
     - python-duckdb >=1.1.2
     - psutil >=5.6.2
-    - rq_geo_toolkit >=2026.4.0
+    - rq_geo_toolkit >=2026.9.0
    # Extra: cli
     - typer >=0.9.0
     - s2sphere >=0.2.5
+    - click >=8.2.1
 
 tests:
   - python:
@@ -57,8 +57,8 @@ tests:
   - script:
       - if: unix
         then:
-        - overturemaestro --help
-        - OvertureMaestro --help
+          - overturemaestro --help
+          - OvertureMaestro --help
       - overturemaestro places place --geom-filter-geocode Monaco --silent
 
 about:
