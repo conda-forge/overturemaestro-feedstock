@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.7.1"
+  version: "0.8.0"
 
 package:
   name: overturemaestro
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/overturemaestro/overturemaestro-${{ version }}.tar.gz
-  sha256: e0fa53df6bd3a5b585397bcc1f52df1516cd33ab5cb2e19a9357559246f9345a
+  sha256: 60561349b3d58b9910074bbdfc613e883cec8200d2c246307405dac9f8b482de
 
 build:
   number: 0
